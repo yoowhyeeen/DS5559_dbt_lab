@@ -27,3 +27,150 @@ Happy modeling!
 [0m01:33:24.355322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40c689be80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40c40b5760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40bf5ce6d0>]}
 [0m01:33:24.355528 [debug] [MainThread]: Flushing usage events
 [0m01:33:31.475808 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
+
+
+============================== 2023-04-21 01:54:06.207244 | d4144330-7f97-4fa0-8027-00b6f480c446 ==============================
+[0m01:54:06.207244 [info ] [MainThread]: Running with dbt=1.4.6
+[0m01:54:06.208010 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/toefoo/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'first_project', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m01:54:06.208125 [debug] [MainThread]: Tracking: tracking
+[0m01:54:06.211056 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f38cd399340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f38d09c1e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f38cd399940>]}
+[0m01:54:06.211765 [debug] [MainThread]: Starter project path: /home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/include/starter_project
+[0m01:55:50.320988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f38cc393fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f38cc393f10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f38cc393af0>]}
+[0m01:55:50.321349 [debug] [MainThread]: Flushing usage events
+[0m01:55:50.583468 [error] [MainThread]: Encountered an error:
+
+[0m01:55:50.584232 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/main.py", line 136, in main
+    results, succeeded = handle_and_check(args)
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/main.py", line 206, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/main.py", line 253, in run_from_args
+    results = task.run()
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/task/init.py", line 305, in run
+    self.create_profile_from_target(adapter, profile_name=project_name)
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/task/init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/task/init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/task/init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/click/termui.py", line 166, in prompt
+    value = prompt_func(prompt)
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/click/termui.py", line 149, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+
+
+============================== 2023-04-21 01:55:52.605516 | 1776cfa6-ea76-4ddd-ae58-ffdf0ac64496 ==============================
+[0m01:55:52.605516 [info ] [MainThread]: Running with dbt=1.4.6
+[0m01:55:52.606267 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/toefoo/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'first_project', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m01:55:52.606382 [debug] [MainThread]: Tracking: tracking
+[0m01:55:52.608659 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb9cd1bee50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb9cd119940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb9cd1192b0>]}
+[0m01:55:52.609353 [info ] [MainThread]: A project called first_project already exists here.
+[0m01:55:52.609567 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb9cd1bee50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb9cd119940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb9cd1192b0>]}
+[0m01:55:52.609708 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-21 01:56:06.115114 | 858bcd39-aacd-4633-8ed6-46f186b311ce ==============================
+[0m01:56:06.115114 [info ] [MainThread]: Running with dbt=1.4.6
+[0m01:56:06.115855 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/toefoo/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'first_project', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m01:56:06.115975 [debug] [MainThread]: Tracking: tracking
+[0m01:56:06.119234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7f52d59fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7f52dffee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7f52d594c0>]}
+[0m01:56:06.120092 [debug] [MainThread]: Starter project path: /home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/include/starter_project
+[0m01:57:07.499735 [info ] [MainThread]: Profile first_project written to /home/toefoo/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m01:57:07.500141 [info ] [MainThread]: 
+Your new dbt project "first_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m01:57:07.500466 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7f52dffee0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7f52d59d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7f52d59550>]}
+[0m01:57:07.500716 [debug] [MainThread]: Flushing usage events
+
+
+============================== 2023-04-21 02:02:27.907428 | 593c82c2-0b8f-4ff9-85ad-28bf65e0efeb ==============================
+[0m02:02:27.907428 [info ] [MainThread]: Running with dbt=1.4.6
+[0m02:02:27.908311 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/toefoo/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m02:02:27.908440 [debug] [MainThread]: Tracking: tracking
+[0m02:02:27.912201 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f02a42ffe50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f02a3f99940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f02a3f992b0>]}
+[0m02:02:28.033770 [debug] [MainThread]: Executing "git --help"
+[0m02:02:28.039491 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m02:02:28.039954 [debug] [MainThread]: STDERR: "b''"
+[0m02:02:28.044283 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m02:02:28.044900 [debug] [MainThread]: Using snowflake connection "debug"
+[0m02:02:28.045057 [debug] [MainThread]: On debug: select 1 as id
+[0m02:02:28.045211 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:02:40.301676 [debug] [MainThread]: Flushing usage events
+[0m02:02:40.555552 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m02:02:40.555938 [info ] [MainThread]: ctrl-c
+
+
+============================== 2023-04-21 02:41:21.957408 | c5b6344a-4671-4cef-ad0d-390000a90a9e ==============================
+[0m02:41:21.957408 [info ] [MainThread]: Running with dbt=1.4.6
+[0m02:41:21.958399 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/toefoo/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'DS5559_DBT_LAB', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m02:41:21.958514 [debug] [MainThread]: Tracking: tracking
+[0m02:41:21.961807 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbd1619970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbd1619880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbd16195e0>]}
+[0m02:41:21.962775 [debug] [MainThread]: Starter project path: /home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/include/starter_project
+[0m02:43:01.437174 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbd06167c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbd0616430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffbd0616820>]}
+[0m02:43:01.437662 [debug] [MainThread]: Flushing usage events
+[0m02:43:01.702799 [error] [MainThread]: Encountered an error:
+
+[0m02:43:01.707187 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/main.py", line 136, in main
+    results, succeeded = handle_and_check(args)
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/main.py", line 206, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/main.py", line 253, in run_from_args
+    results = task.run()
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/task/init.py", line 305, in run
+    self.create_profile_from_target(adapter, profile_name=project_name)
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/task/init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/task/init.py", line 164, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/task/init.py", line 130, in generate_target_from_input
+    target[key] = click.prompt(
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/click/termui.py", line 166, in prompt
+    value = prompt_func(prompt)
+  File "/home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/click/termui.py", line 149, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+
+
+============================== 2023-04-21 02:43:26.503986 | f2cea8d7-9b2f-4e6e-ac5f-59ed2008699f ==============================
+[0m02:43:26.503986 [info ] [MainThread]: Running with dbt=1.4.6
+[0m02:43:26.504706 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/toefoo/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'DS5559_DBT_LAB', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m02:43:26.504816 [debug] [MainThread]: Tracking: tracking
+[0m02:43:26.508579 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda7cf59340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda807c1e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda7cf59940>]}
+[0m02:43:26.509503 [debug] [MainThread]: Starter project path: /home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/DS5559_dbt_lab/dbt_lab/lib/python3.9/site-packages/dbt/include/starter_project
+[0m02:44:15.388380 [info ] [MainThread]: Profile DS5559_DBT_LAB written to /home/toefoo/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m02:44:15.388658 [info ] [MainThread]: 
+Your new dbt project "DS5559_DBT_LAB" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m02:44:15.388871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda807c1e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda7cf59790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fda7cf59c10>]}
+[0m02:44:15.389039 [debug] [MainThread]: Flushing usage events
