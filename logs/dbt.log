@@ -1,0 +1,29 @@
+
+
+============================== 2023-04-21 01:23:00.641541 | 60a70871-8344-49d6-9f58-36077d3dc1aa ==============================
+[0m01:23:00.641541 [info ] [MainThread]: Running with dbt=1.4.6
+[0m01:23:00.642302 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/toefoo/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'first_project', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m01:23:00.642420 [debug] [MainThread]: Tracking: tracking
+[0m01:23:00.644840 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40c307e520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40c307e0a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40c307e430>]}
+[0m01:23:00.645187 [info ] [MainThread]: Creating dbt configuration folder at /home/toefoo/.dbt
+[0m01:23:00.645842 [debug] [MainThread]: Starter project path: /home/toefoo/Documents/UVA/Data-Engineering/clone/ds-5559/Labs/dbt/dbt_labs/lib/python3.9/site-packages/dbt/include/starter_project
+[0m01:33:24.354718 [info ] [MainThread]: Profile first_project written to /home/toefoo/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m01:33:24.355059 [info ] [MainThread]: 
+Your new dbt project "first_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m01:33:24.355322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40c689be80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40c40b5760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f40bf5ce6d0>]}
+[0m01:33:24.355528 [debug] [MainThread]: Flushing usage events
+[0m01:33:31.475808 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
